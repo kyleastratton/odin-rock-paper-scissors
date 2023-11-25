@@ -5,19 +5,29 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ORPS</title>
+  <link rel=stylesheet href="style.css">
 </head>
 <body>
-  <label for="userInput">Select an option:</label>
 
-  <select name="userInput" id="userInput">
-    <option value="rock">Rock</option>
-    <option value="paper">Paper</option>
-    <option value="scissors">Scissors</option>
-  </select>
-
-  <button onClick="calculateWinner()">Check</button>
-
-  <p>Did you win: <span id="result"></span></p>
+  <div class="main-content">
+    <div class="container">
+      <label for="userInput">Select an option</label>
+  
+      <select name="userInput" id="userInput">
+        <option value="rock">Rock</option>
+        <option value="paper">Paper</option>
+        <option value="scissors">Scissors</option>
+      </select>
+  
+      <div>
+        <button class="button" onClick="calculateWinner()">Play</button>
+      </div>
+  
+      <div>
+        <p>Result: <span id="result">Click play to begin</span></p>
+      </div>
+    </div>
+  </div>
 
   <script src="script.js"></script>
 </body>

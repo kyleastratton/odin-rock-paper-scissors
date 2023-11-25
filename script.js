@@ -3,44 +3,47 @@
 
 // const validOptions = ["rock", "paper", "scissors"]
 
-function generateEnemyChoice(validOptions) {
-  return enemyChoice = validOptions[Math.floor(Math.random() * validOptions.length)];
+function generateopponentChoice(validOptions) {
+  return opponentChoice = validOptions[Math.floor(Math.random() * validOptions.length)];
 }
 
-function userIsRock(enemyChoice) {
-  if (enemyChoice === "scissors") {
-    return document.getElementById("result").innerHTML = "Yes"
+function userIsRock(opponentChoice) {
+  if (opponentChoice === "scissors") {
+    return document.getElementById("result").innerHTML = "You win!"
   }
-  if (enemyChoice === "paper") {
-    return document.getElementById("result").innerHTML = "No"
+  if (opponentChoice === "paper") {
+    return document.getElementById("result").innerHTML = "You lose!"
   } 
 }
 
-function userIsPaper(enemyChoice) {
-  if (enemyChoice === "rock") {
-    return document.getElementById("result").innerHTML = "Yes"
+function userIsPaper(opponentChoice) {
+  if (opponentChoice === "rock") {
+    return document.getElementById("result").innerHTML = "You win!"
   } else {
-    return document.getElementById("result").innerHTML = "No"
+    return document.getElementById("result").innerHTML = "You lose!"
   }
 }
 
-function userIsScissors(enemyChoice) {
-  if (enemyChoice === "paper") {
-    return document.getElementById("result").innerHTML = "Yes"
+function userIsScissors(opponentChoice) {
+  if (opponentChoice === "paper") {
+    return document.getElementById("result").innerHTML = "You win!"
   } else {
-    return document.getElementById("result").innerHTML = "No"
+    return document.getElementById("result").innerHTML = "You lose!"
   }
 }
 
-function calculateResult(userChoice, enemyChoice) {
+function calculateResult(userChoice, opponentChoice) {
+  if (userChoice === opponentChoice) {
+    return document.getElementById("result").innerHTML = "It's a draw!"
+  }
   if (userChoice === "rock") {
-    userIsRock(enemyChoice)
+    userIsRock(opponentChoice)
   }
   if (userChoice === "paper") {
-    userIsPaper(enemyChoice)
+    userIsPaper(opponentChoice)
   }
   if (userChoice === "scissors") {
-    userIsScissors(enemyChoice)
+    userIsScissors(opponentChoice)
   }
 }
 
@@ -49,21 +52,21 @@ function calculateWinner() {
   let userChoice = document.getElementById('userInput').value;
   console.log("User chose: ", userChoice);
   
-  // get enemy choice
+  // get opponent choice
   const validOptions = ["rock", "paper", "scissors"]
-  let enemyChoice = validOptions[Math.floor(Math.random() * validOptions.length)];
-  console.log("Enemy chose: ",enemyChoice);
+  let opponentChoice = validOptions[Math.floor(Math.random() * validOptions.length)];
+  console.log("opponent chose: ",opponentChoice);
 
   // calculate winner
   // let calculatedResult = null;
 
   // return winner
-  // calculateResult(userChoice, enemyChoice)
+  // calculateResult(userChoice, opponentChoice)
   // if (calculateResult === true) {
   //   document.getElementById("result").innerHTML = "Yes"
   // } else {
   //   document.getElementById("result").innerHTML = "No"
   // }
-  calculateResult(userChoice, enemyChoice)
+  calculateResult(userChoice, opponentChoice)
 }
 
