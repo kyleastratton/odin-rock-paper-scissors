@@ -1,8 +1,3 @@
-// let userChoice = document.getElementById('userInput').value;
-
-
-// const validOptions = ["rock", "paper", "scissors"]
-
 function generateopponentChoice(validOptions) {
   return opponentChoice = validOptions[Math.floor(Math.random() * validOptions.length)];
 }
@@ -50,23 +45,14 @@ function calculateResult(userChoice, opponentChoice) {
 function calculateWinner() {
   // get user choice
   let userChoice = document.getElementById('userInput').value;
-  console.log("User chose: ", userChoice);
   
   // get opponent choice
   const validOptions = ["rock", "paper", "scissors"]
   let opponentChoice = validOptions[Math.floor(Math.random() * validOptions.length)];
-  console.log("opponent chose: ",opponentChoice);
+  let opponentChoiceValue = opponentChoice[0].toUpperCase() + opponentChoice.slice(1);
+  document.getElementById("opponent-selected").innerHTML = opponentChoiceValue;
 
-  // calculate winner
-  // let calculatedResult = null;
-
-  // return winner
-  // calculateResult(userChoice, opponentChoice)
-  // if (calculateResult === true) {
-  //   document.getElementById("result").innerHTML = "Yes"
-  // } else {
-  //   document.getElementById("result").innerHTML = "No"
-  // }
+  //calculate winner
   calculateResult(userChoice, opponentChoice)
 }
 
