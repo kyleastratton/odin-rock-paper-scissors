@@ -40,7 +40,7 @@ function calculateResult(userChoice, enemyChoice) {
     userIsPaper(enemyChoice)
   }
   if (userChoice === "scissors") {
-    IsScissors(enemyChoice)
+    userIsScissors(enemyChoice)
   }
 }
 
