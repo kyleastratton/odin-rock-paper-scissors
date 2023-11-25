@@ -19,7 +19,7 @@ body {
   width: 30vw;
   min-width: fit-content;
   margin-top: 10%;
-  padding: 5vw 5vw;
+  padding: 25px;
 }
 
 .button {
@@ -30,4 +30,28 @@ body {
   margin: 20px;
   background-color: #2F6ED9;
   color: white;
+}
+
+#user-input {
+  display: block;
+  margin-top: 10px;
+  background-color: #2F6ED9;
+  border: 1px solid #2F6ED9;
+  color: white;
+  border-radius: 0.25rem;
+  position: relative;
+  padding: 2px;
+}
+
+.input-container {
+  display: flex;
+  justify-content: center;
+}
+
+.italics {
+  font-style: italic;
+}
+
+.bold {
+  font-weight: 600;
 }

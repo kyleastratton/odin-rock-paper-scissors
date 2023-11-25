@@ -11,24 +11,25 @@
 
   <div class="main-content">
     <div class="container">
-      <label for="userInput">Select an option</label>
-  
-      <select name="userInput" id="userInput">
-        <option value="rock">Rock</option>
-        <option value="paper">Paper</option>
-        <option value="scissors">Scissors</option>
-      </select>
+      <label for="user-input">Select an option below and click play</label>
+      <div class="input-container">
+        <select name="user-input" id="user-input" class="user-input" style="width:200px;">
+          <option class="option" value="rock">Rock</option>
+          <option class="option" value="paper">Paper</option>
+          <option class="option" value="scissors">Scissors</option>
+        </select>
+      </div>
   
       <div>
         <button class="button" onClick="calculateWinner()">Play</button>
       </div>
-
-      <div>
-        <p>Your opponent chose: <span id="opponent-selected">Click play to start game</span></p>
-      </div>
   
       <div>
-        <p>Result: <span id="result">Click play to begin</span></p>
+        <p>Result: <span class="bold" id="result">Click play to begin</span></p>
+      </div>
+
+      <div>
+        <p class="italics">Your opponent chose: <span id="opponent-selected">Click play to start game</span></p>
       </div>
     </div>
   </div>

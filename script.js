@@ -7,7 +7,7 @@ function userIsRock(opponentChoice) {
     return document.getElementById("result").innerHTML = "You win!"
   }
   if (opponentChoice === "paper") {
-    return document.getElementById("result").innerHTML = "You lose!"
+    return document.getElementById("result").innerHTML = "You lose :("
   } 
 }
 
@@ -15,7 +15,7 @@ function userIsPaper(opponentChoice) {
   if (opponentChoice === "rock") {
     return document.getElementById("result").innerHTML = "You win!"
   } else {
-    return document.getElementById("result").innerHTML = "You lose!"
+    return document.getElementById("result").innerHTML = "You lose :("
   }
 }
 
@@ -23,7 +23,7 @@ function userIsScissors(opponentChoice) {
   if (opponentChoice === "paper") {
     return document.getElementById("result").innerHTML = "You win!"
   } else {
-    return document.getElementById("result").innerHTML = "You lose!"
+    return document.getElementById("result").innerHTML = "You lose :("
   }
 }
 
@@ -44,7 +44,7 @@ function calculateResult(userChoice, opponentChoice) {
 
 function calculateWinner() {
   // get user choice
-  let userChoice = document.getElementById('userInput').value;
+  let userChoice = document.getElementById('user-input').value;
   
   // get opponent choice
   const validOptions = ["rock", "paper", "scissors"]
@@ -55,4 +55,3 @@ function calculateWinner() {
   //calculate winner
   calculateResult(userChoice, opponentChoice)
 }
-
