@@ -1,6 +1,6 @@
 body {
   font-family: sans-serif;
-  background-color: #2F6ED9;
+  background-color: #222C4A;
   color: white;
 }
 
@@ -10,34 +10,33 @@ body {
   justify-content: center;
   width: 100vw;
   flex-direction: column;
-  /* height: 100vw; */
 }
 
 .background {
-  background-color: #214688;
+  background-color: #313B59;
   border-radius: 0.75rem;
   text-align: center;
   width: 30vw;
   min-width: fit-content;
-  margin-top: 10%;
+  margin-top: 2%;
   padding: 25px;
 }
 
 .button {
   height: 30px;
   width: 100px;
-  border: solid 1px #214688;
+  border: solid 1px #313B59;
   border-radius: 0.5rem;
   margin: 20px;
-  background-color: #2F6ED9;
+  background-color: #222C4A;
   color: white;
 }
 
 #user-input {
   display: block;
   margin-top: 10px;
-  background-color: #2F6ED9;
-  border: 1px solid #2F6ED9;
+  background-color: #222C4A;
+  border: 1px solid #222C4A;
   color: white;
   border-radius: 0.25rem;
   position: relative;
@@ -56,8 +55,6 @@ body {
 .bold {
   font-weight: 600;
 }
-
-/* new */
 
 .icon-main-container {
   display: flex;
