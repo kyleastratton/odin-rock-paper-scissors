@@ -1,35 +1,56 @@
+const rock = document.querySelector('#rock');
+rock.onclick = () => getUserChoice("rock");
+
+const paper = document.querySelector('#paper');
+paper.onclick = () => getUserChoice("paper");
+
+const scissors = document.querySelector('#scissors');
+scissors.onclick = () => getUserChoice("scissors");
+
+function getUserChoice(id) {
+  let userChoice = id;
+  calculateWinner(userChoice);
+}
+
 function generateopponentChoice(validOptions) {
   return opponentChoice = validOptions[Math.floor(Math.random() * validOptions.length)];
 }
 
+function renderResult(msg) {
+  console.log("msg = ", msg);
+  let span = document.getElementById("result"); 
+  span.innerText = msg;
+}
+
 function userIsRock(opponentChoice) {
+  console.log("user chose rock");
   if (opponentChoice === "scissors") {
-    return document.getElementById("result").innerHTML = "You win!"
+    renderResult("You win!");
   }
   if (opponentChoice === "paper") {
-    return document.getElementById("result").innerHTML = "You lose :("
+    renderResult("You lose!");
   } 
 }
 
 function userIsPaper(opponentChoice) {
   if (opponentChoice === "rock") {
-    return document.getElementById("result").innerHTML = "You win!"
+    renderResult("You win!");
   } else {
-    return document.getElementById("result").innerHTML = "You lose :("
+    renderResult("You lose!");
   }
 }
 
 function userIsScissors(opponentChoice) {
   if (opponentChoice === "paper") {
-    return document.getElementById("result").innerHTML = "You win!"
+    renderResult("You win!");
   } else {
-    return document.getElementById("result").innerHTML = "You lose :("
+    renderResult("You lose!");
   }
 }
 
 function calculateResult(userChoice, opponentChoice) {
   if (userChoice === opponentChoice) {
-    return document.getElementById("result").innerHTML = "It's a draw!"
+    return document.querySelector("#result").innerHTML = "It's a draw!"
   }
   if (userChoice === "rock") {
     userIsRock(opponentChoice)
@@ -42,10 +63,7 @@ function calculateResult(userChoice, opponentChoice) {
   }
 }
 
-function calculateWinner() {
-  // get user choice
-  let userChoice = document.getElementById('user-input').value;
-  
+function calculateWinner(userChoice) {
   // get opponent choice
   const validOptions = ["rock", "paper", "scissors"]
   let opponentChoice = validOptions[Math.floor(Math.random() * validOptions.length)];
