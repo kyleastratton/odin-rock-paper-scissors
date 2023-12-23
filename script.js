@@ -1,3 +1,6 @@
+const hidden = document.getElementById("hidden");
+hidden.style.display = "none";
+
 const rock = document.querySelector('#rock');
 rock.onclick = () => getUserChoice("rock");
 
@@ -20,6 +23,7 @@ function renderResult(msg) {
   console.log("msg = ", msg);
   let span = document.getElementById("result"); 
   span.innerText = msg;
+  hidden.style.display = "";
 }
 
 function userIsRock(opponentChoice) {
