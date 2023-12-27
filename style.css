@@ -12,11 +12,12 @@ body {
   flex-direction: column;
 }
 
-.background {
+.card {
   background-color: #313B59;
   border-radius: 0.75rem;
   text-align: center;
   width: 30vw;
+  height: fit-content;
   min-width: fit-content;
   margin-top: 2%;
   padding: 25px;
@@ -54,6 +55,8 @@ body {
 
 .bold {
   font-weight: 600;
+  font-size: xx-large;
+  margin-top: 4rem;
 }
 
 .icon-main-container {
@@ -75,4 +78,20 @@ body {
   align-items: center;
   text-align: center;
   margin: auto;
+}
+
+.icon-container-large {
+  width: 100px;
+  height: fit-content;
+}
+
+.img-lrg {
+  height: 100px;
+  font-size: 64px
+}
+
+.flexbox {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 }

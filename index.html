@@ -16,7 +16,7 @@
 
   <div class="main-container">
 
-    <div class="background">
+    <div class="card">
       <div class="icon-main-container">
         <div class="sub-container">
           <div class="icon-container" id="rock">
@@ -41,7 +41,7 @@
       </div>
     </div>
 
-    <div class="background" id="hidden">
+    <!-- <div class="background" id="hidden">
       <div>
         <p class="italics">Your opponent chose: <span id="opponent-selected">Select an option above to start the game</span></p>
       </div>
@@ -49,6 +49,26 @@
         <p>Result: <span class="bold" id="result">Select an option above to start the game</span></p>
       </div>
       
+    </div> -->
+
+    <div class="card" id="hidden">
+      <div class="flexbox">
+        <div class="icon-container-large">
+          <div><p>You</p></div>
+          <div class="img-lrg" id="displayUserChoice">❓</div>
+        </div>
+
+        <div>
+          <p style="padding-top: 50px;">VS</p>
+        </div>
+  
+        <div class="icon-container-large">
+          <div><p>Opponent</p></div>
+          <div class="img-lrg" id="displayOpponentChoice">❓</div>
+        </div>
+      </div>
+
+      <span class="bold" id="result">Select an option above to start the game</span>
     </div>
 
   </div>

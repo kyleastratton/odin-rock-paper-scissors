@@ -1,6 +1,9 @@
 const hidden = document.getElementById("hidden");
 hidden.style.display = "none";
 
+const icon = document.querySelector('.icon');
+icon.onclick = () => displayUserChoice(icon.innerHTML);
+
 const rock = document.querySelector('#rock');
 rock.onclick = () => getUserChoice("rock");
 
@@ -15,19 +18,7 @@ function getUserChoice(id) {
   calculateWinner(userChoice);
 }
 
-function generateopponentChoice(validOptions) {
-  return opponentChoice = validOptions[Math.floor(Math.random() * validOptions.length)];
-}
-
-function renderResult(msg) {
-  console.log("msg = ", msg);
-  let span = document.getElementById("result"); 
-  span.innerText = msg;
-  hidden.style.display = "";
-}
-
 function userIsRock(opponentChoice) {
-  console.log("user chose rock");
   if (opponentChoice === "scissors") {
     renderResult("You win!");
   }
@@ -71,9 +62,26 @@ function calculateWinner(userChoice) {
   // get opponent choice
   const validOptions = ["rock", "paper", "scissors"]
   let opponentChoice = validOptions[Math.floor(Math.random() * validOptions.length)];
-  let opponentChoiceValue = opponentChoice[0].toUpperCase() + opponentChoice.slice(1);
-  document.getElementById("opponent-selected").innerHTML = opponentChoiceValue;
+  // let opponentChoiceValue = opponentChoice[0].toUpperCase() + opponentChoice.slice(1);
+  // document.getElementById("opponent-selected").innerHTML = opponentChoiceValue;
+  displayOpponentChoice(opponentChoice);
 
-  //calculate winner
+  // calculate winner
   calculateResult(userChoice, opponentChoice)
+}
+
+function displayUserChoice(icon) {
+  document.querySelector("#displayUserChoice").innerHTML = icon;
+};
+
+function displayOpponentChoice(opponentChoice) {
+  let target = document.querySelector(`#${opponentChoice}`);
+  let newTarget = target.innerHTML;
+  document.querySelector("#displayOpponentChoice").innerHTML = newTarget;
+}
+
+function renderResult(msg) {
+  let span = document.getElementById("result"); 
+  span.innerText = msg;
+  hidden.style.display = "";
 }
