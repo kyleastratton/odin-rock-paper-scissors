@@ -78,4 +78,26 @@ function renderResult(msg) {
   let span = document.getElementById("result"); 
   span.innerText = msg;
   hidden.style.display = "";
+
+  if (msg === "You win!") {
+    increaseYouScore();
+  }
+
+  if (msg === "You lose!") {
+    increaseOponnentScore();
+  }
+}
+
+function increaseYouScore() {
+  let value = document.querySelector("#you").innerHTML;
+  let numberValue = Number(value);
+  let newValue = numberValue + 1;
+  document.querySelector("#you").innerHTML = newValue;
+}
+
+function increaseOponnentScore() {
+  let value = document.querySelector("#opponent").innerHTML;
+  let numberValue = Number(value);
+  let newValue = numberValue + 1;
+  document.querySelector("#opponent").innerHTML = newValue;
 }

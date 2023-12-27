@@ -100,3 +100,8 @@ body {
   flex-direction: row;
   justify-content: space-around;
 }
+
+hr {
+  border-top: 1px solid #8c8b8b;
+  margin-top: 1rem;
+}
