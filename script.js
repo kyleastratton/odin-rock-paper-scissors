@@ -1,24 +1,11 @@
 const hidden = document.getElementById("hidden");
 hidden.style.display = "none";
 
-function rock() {
-  getUserChoice("rock");
-  const rock = document.querySelector('#rock');
-  displayUserChoice(rock.innerHTML);
+function selectChoice(option) {
+  getUserChoice(`${option}`);
+  const choice = document.querySelector(`#${option}`);
+  displayUserChoice(choice.innerHTML);
 }
-
-function paper() {
-  getUserChoice("paper");
-  const paper = document.querySelector('#paper');
-  displayUserChoice(paper.innerHTML);
-}
-
-function scissors () {
-  getUserChoice("scissors");
-  const scissors = document.querySelector('#scissors');
-  displayUserChoice(scissors.innerHTML);
-}
-
 
 function getUserChoice(id) {
   let userChoice = id;

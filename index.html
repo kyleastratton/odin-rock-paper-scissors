@@ -18,19 +18,19 @@
     <div class="card">
       <div class="icon-main-container">
         <div class="sub-container">
-          <div class="icon-container" id="rock" onClick="rock()">
+          <div class="icon-container" id="rock" onClick="selectChoice('rock')">
             <div class="icon">
               🪨
             </div>
           </div>
       
-          <div class="icon-container" id="paper" onClick="paper()">
+          <div class="icon-container" id="paper" onClick="selectChoice('paper')">
             <div class="icon">
               📄
             </div>
           </div>
       
-          <div class="icon-container" id="scissors" onClick="scissors()">
+          <div class="icon-container" id="scissors" onClick="selectChoice('scissors')">
             <div class="icon">
               ✂️
             </div>
@@ -44,7 +44,9 @@
       <div class="flexbox">
         <div class="icon-container-large">
           <div><p>You</p></div>
-          <div class="img-lrg" id="displayUserChoice">❓</div>
+          <div class="img-lrg" id="displayUserChoice">
+            ❓
+          </div>
         </div>
 
         <div>
@@ -53,7 +55,9 @@
   
         <div class="icon-container-large">
           <div><p>Opponent</p></div>
-          <div class="img-lrg" id="displayOpponentChoice">❓</div>
+          <div class="img-lrg" id="displayOpponentChoice">
+            ❓
+          </div>
         </div>
       </div>
 
