@@ -1,9 +1,6 @@
 const hidden = document.getElementById("hidden");
 hidden.style.display = "none";
 
-// const icon = document.querySelector('.icon');
-// icon.onclick = () => displayUserChoice(icon.innerHTML);
-
 function rock() {
   getUserChoice("rock");
   const rock = document.querySelector('#rock');
@@ -26,9 +23,6 @@ function scissors () {
 function getUserChoice(id) {
   let userChoice = id;
   calculateWinner(userChoice);
-  // const icon = document.querySelector(`${id}`);
-  // console.log(icon);
-  // displayUserChoice(icon)
 }
 
 function userIsRock(opponentChoice) {
