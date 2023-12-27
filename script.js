@@ -1,21 +1,34 @@
 const hidden = document.getElementById("hidden");
 hidden.style.display = "none";
 
-const icon = document.querySelector('.icon');
-icon.onclick = () => displayUserChoice(icon.innerHTML);
+// const icon = document.querySelector('.icon');
+// icon.onclick = () => displayUserChoice(icon.innerHTML);
 
-const rock = document.querySelector('#rock');
-rock.onclick = () => getUserChoice("rock");
+function rock() {
+  getUserChoice("rock");
+  const rock = document.querySelector('#rock');
+  displayUserChoice(rock.innerHTML);
+}
 
-const paper = document.querySelector('#paper');
-paper.onclick = () => getUserChoice("paper");
+function paper() {
+  getUserChoice("paper");
+  const paper = document.querySelector('#paper');
+  displayUserChoice(paper.innerHTML);
+}
 
-const scissors = document.querySelector('#scissors');
-scissors.onclick = () => getUserChoice("scissors");
+function scissors () {
+  getUserChoice("scissors");
+  const scissors = document.querySelector('#scissors');
+  displayUserChoice(scissors.innerHTML);
+}
+
 
 function getUserChoice(id) {
   let userChoice = id;
   calculateWinner(userChoice);
+  // const icon = document.querySelector(`${id}`);
+  // console.log(icon);
+  // displayUserChoice(icon)
 }
 
 function userIsRock(opponentChoice) {
