@@ -2,6 +2,11 @@ body {
   font-family: sans-serif;
   background-color: #222C4A;
   color: white;
+  margin-bottom: 5rem;
+}
+
+p {
+  font-size: 1rem;
 }
 
 .main-container {
@@ -53,12 +58,6 @@ body {
   font-style: italic;
 }
 
-/* .bold {
-  font-weight: 600;
-  font-size: xx-large;
-  margin-top: 4rem;
-} */
-
 .icon-main-container {
   display: flex;
   justify-content: center;
@@ -67,17 +66,18 @@ body {
 .sub-container {
   display: flex;
   flex-direction: row;
-  width: 20vw;
 }
 
 .icon-container {
   width: 100px;
   height: fit-content;
-  /* background-color: black; */
   font-size: xx-large;
   align-items: center;
   text-align: center;
-  margin: auto;
+  margin: 0.2rem;
+  border: 1px dashed white;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
 }
 
 .icon-container-large {
@@ -98,5 +98,5 @@ body {
 
 hr {
   border-top: 1px solid #8c8b8b;
-  margin-top: 1rem;
+  margin-top: 2rem;
 }
