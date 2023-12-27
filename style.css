@@ -19,8 +19,8 @@ body {
   width: 30vw;
   height: fit-content;
   min-width: fit-content;
-  margin-top: 2%;
-  padding: 25px;
+  margin-top: 1%;
+  padding: 1rem 1.8rem;
 }
 
 .button {
@@ -53,11 +53,11 @@ body {
   font-style: italic;
 }
 
-.bold {
+/* .bold {
   font-weight: 600;
   font-size: xx-large;
   margin-top: 4rem;
-}
+} */
 
 .icon-main-container {
   display: flex;
