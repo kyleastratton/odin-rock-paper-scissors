@@ -101,3 +101,9 @@ function increaseOponnentScore() {
   let newValue = numberValue + 1;
   document.querySelector("#opponent").innerHTML = newValue;
 }
+
+function reset() {
+  let resetValue = 0;
+  document.querySelector("#you").innerHTML = resetValue;
+  document.querySelector("#opponent").innerHTML = resetValue;
+}
